@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Innovate Hub builds thoughtful digital products, automation tools, secure mobile experiences, and scalable software solutions.">
+  <title>Innovate Hub — Ideas Into Impact</title>
+  <style>
+    :root{--bg:#090b12;--panel:#111522;--panel2:#151b2b;--text:#f4f6fb;--muted:#a7afc2;--line:rgba(255,255,255,.1);--accent:#9b8cff;--accent2:#55e6c1;--glow:rgba(155,140,255,.2);--max:1180px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(95,74,205,.17),transparent 36%),radial-gradient(ellipse at 0% 32%,rgba(44,196,166,.08),transparent 30%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}button{font:inherit}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav-wrap{position:sticky;top:0;z-index:10;background:rgba(9,11,18,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:1.15rem}
+    .logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#5dceca);color:#080a11;font-weight:950;font-size:1.2rem;box-shadow:0 8px 30px var(--glow)}
+    .brand small{display:block;font-size:.62rem;color:var(--muted);letter-spacing:.17em;text-transform:uppercase;line-height:1.2;margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:.9rem}
+    .nav-links a:hover,.text-link:hover{color:var(--text)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;font-weight:750;font-size:.91rem;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s;cursor:pointer}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(120deg,var(--accent),#75dcca);color:#090b12;box-shadow:0 10px 28px var(--glow)}
+    .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.035)}
+    .menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 11px}
+    .hero{padding:104px 0 88px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:58px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent2);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:24px;height:1px;background:currentColor}
+    h1{font-size:clamp(3rem,6.3vw,5.65rem);line-height:1.01;letter-spacing:-.075em;margin:22px 0 24px;max-width:760px}
+    .gradient-text{background:linear-gradient(105deg,#c7bdff 5%,#8be9d6 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);font-size:1.12rem;max-width:610px;margin:0 0 30px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-note{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:.84rem}
+    .hero-note span{display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 12px var(--accent2)}
+    .visual{position:relative;min-height:420px;display:grid;place-items:center}
+    .orb{position:absolute;width:290px;height:290px;border-radius:50%;background:radial-gradient(circle at 35% 28%,rgba(172,157,255,.55),rgba(93,79,190,.14) 48%,transparent 72%);filter:blur(2px)}
+    .orbit{position:absolute;width:350px;height:350px;border:1px solid rgba(173,160,255,.25);border-radius:50%;transform:rotate(-22deg) scaleY(.68)}
+    .orbit.two{width:420px;height:420px;transform:rotate(42deg) scaleY(.68);border-color:rgba(85,230,193,.18)}
+    .float-card{position:absolute;background:linear-gradient(145deg,rgba(25,31,49,.94),rgba(13,17,28,.94));border:1px solid rgba(255,255,255,.13);box-shadow:0 22px 65px rgba(0,0,0,.3);border-radius:18px;padding:18px 20px;backdrop-filter:blur(12px)}
+    .float-card .symbol{font-size:1.5rem}.float-card strong{display:block;margin-top:7px}.float-card small{color:var(--muted)}
+    .fc1{top:55px;left:0;transform:rotate(-5deg)}.fc2{right:0;top:115px;transform:rotate(5deg)}.fc3{left:45px;bottom:42px;transform:rotate(3deg)}
+    .core{position:relative;width:154px;height:154px;border-radius:38px;background:linear-gradient(135deg,#c0b5ff,#65e2cc);display:grid;place-items:center;color:#0b0d16;font-size:4.1rem;font-weight:950;letter-spacing:-.1em;box-shadow:0 0 85px rgba(155,140,255,.32);transform:rotate(-8deg)}
+    .core:after{content:"";position:absolute;inset:9px;border:1px solid rgba(9,11,18,.24);border-radius:30px}
+    section{padding:82px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:35px}
+    .kicker{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:800}
+    h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.055em;line-height:1.12;margin:10px 0 0}
+    .section-head p{color:var(--muted);max-width:470px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .panel{background:linear-gradient(145deg,rgba(21,27,43,.88),rgba(14,18,29,.8));border:1px solid var(--line);border-radius:22px;padding:28px}
+    .panel h3{margin:0 0 10px;font-size:1.2rem;letter-spacing:-.025em}.panel p{color:var(--muted);margin:0}
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .value{padding:18px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .value .icon{font-size:1.3rem}.value strong{display:block;margin:9px 0 4px}.value span{font-size:.85rem;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{position:relative;display:flex;flex-direction:column;min-height:300px;padding:23px;border-radius:21px;border:1px solid var(--line);background:linear-gradient(150deg,rgba(20,26,42,.92),rgba(12,15,25,.92));transition:transform .22s,border-color .22s,box-shadow .22s}
+    .project:hover{transform:translateY(-5px);border-color:rgba(155,140,255,.5);box-shadow:0 18px 45px rgba(0,0,0,.22)}
+    .project-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+    .project-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(155,140,255,.22),rgba(85,230,193,.12));border:1px solid rgba(255,255,255,.1);font-size:1.45rem}
+    .tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;padding:6px 9px;border-radius:100px;background:rgba(155,140,255,.12);color:#c5bcff;border:1px solid rgba(155,140,255,.22);white-space:nowrap}
+    .tag.concept{background:rgba(255,193,112,.08);color:#f4c98b;border-color:rgba(255,193,112,.2)}
+    .project h3{font-size:1.17rem;letter-spacing:-.03em;margin:0 0 9px}
+    .project p{color:var(--muted);font-size:.91rem;margin:0 0 18px}
+    .chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+    .chip{font-size:.72rem;color:#c0c7d8;border:1px solid var(--line);border-radius:7px;padding:4px 8px;background:rgba(255,255,255,.025)}
+    .project-note{font-size:.78rem;color:var(--muted);margin-top:24px}
+    .cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .cap{padding:21px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}
+    .cap .icon{font-size:1.45rem}.cap h3{font-size:1rem;margin:10px 0 5px}.cap p{color:var(--muted);font-size:.85rem;margin:0}
+    .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+    .stack span{padding:9px 13px;border:1px solid var(--line);border-radius:10px;color:#d0d5e2;background:rgba(255,255,255,.025);font-size:.84rem}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:20px 0;border-top:1px solid var(--line)}.step b{font-size:.76rem;color:var(--accent2);letter-spacing:.12em}.step h3{margin:10px 0 6px;font-size:1.05rem}.step p{color:var(--muted);font-size:.88rem;margin:0}
+    .contact{padding:38px;border-radius:28px;border:1px solid rgba(155,140,255,.28);background:radial-gradient(ellipse at 100% 0%,rgba(155,140,255,.18),transparent 48%),linear-gradient(135deg,rgba(22,27,44,.96),rgba(13,17,28,.96));display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .contact h2{max-width:620px}.contact p{color:var(--muted);max-width:610px}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
+    footer{padding:30px 0 38px;color:var(--muted);font-size:.82rem}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:24px}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:20px}.hero{padding-top:75px}.visual{min-height:360px}.projects{grid-template-columns:repeat(2,1fr)}.cap-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:640px){.container{width:min(100% - 28px,var(--max))}nav{height:68px}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px 22px;background:#0c0f18;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:14px}.nav-links.open{display:flex}.nav-links a{padding:7px 0}.nav-cta{display:none}.menu-btn{display:block}.hero{padding:62px 0 48px}h1{font-size:clamp(2.75rem,13vw,4rem)}.hero p{font-size:1rem}.visual{min-height:310px;transform:scale(.88);margin:-8px -20px}.orbit{width:300px;height:300px}.orbit.two{width:350px;height:350px}.core{width:130px;height:130px;font-size:3.4rem}.fc1{left:4px;top:25px}.fc2{right:0;top:83px}.fc3{left:18px;bottom:20px}.float-card{padding:13px 15px}.about-grid,.projects{grid-template-columns:1fr}.values{grid-template-columns:1fr}.cap-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr;gap:22px}.panel{padding:23px}.contact{padding:26px 22px}.footer-inner{align-items:flex-start;flex-direction:column}.hero-note{gap:12px 18px}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Innovate Hub home"><span class="logo">i.</span><span>INNOVATE HUB<small>Ideas into impact</small></span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#products">Products</a><a href="#capabilities">Capabilities</a><a href="#approach">Our approach</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary nav-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Technology · Product · Innovation</div>
+          <h1>We turn bold ideas into <span class="gradient-text">useful technology.</span></h1>
+          <p>Innovate Hub is a software and product innovation initiative focused on building digital experiences, practical automation, secure mobile tools, and scalable applications that solve real problems.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#products">Explore our work <span aria-hidden="true">↓</span></a><a class="btn btn-ghost" href="mailto:sushanth.chithaluri@innovatehub.app?subject=Innovate%20Hub%20Enquiry">Contact the team <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-note"><span><i class="dot"></i> Problem-first engineering</span><span><i class="dot"></i> Security-conscious design</span><span><i class="dot"></i> Built for real-world use</span></div>
+        </div>
+        <div class="visual" aria-label="Abstract illustration representing connected technology products">
+          <div class="orb"></div><div class="orbit"></div><div class="orbit two"></div><div class="core">i.</div>
+          <div class="float-card fc1"><span class="symbol">⌘</span><strong>Automation</strong><small>Less repetitive work</small></div>
+          <div class="float-card fc2"><span class="symbol">⬡</span><strong>Secure by design</strong><small>Protection-focused tools</small></div>
+          <div class="float-card fc3"><span class="symbol">✳</span><strong>Product thinking</strong><small>From concept to iteration</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Who we are</div><h2>Engineering with a purpose.</h2></div><p>We bring product thinking and software engineering together to explore ideas, build useful tools, and improve how people interact with technology.</p></div>
+        <div class="about-grid">
+          <div class="panel"><h3>Our mission</h3><p>Make technology more useful, accessible, and dependable through thoughtful software, automation, and user-focused digital products.</p></div>
+          <div class="panel"><h3>Our vision</h3><p>Build a portfolio of practical products that connect innovation with everyday needs—from digital commerce and mobile security to workflow automation and AI-assisted experiences.</p></div>
+        </div>
+        <div class="values">
+          <div class="value"><div class="icon">◈</div><strong>Useful innovation</strong><span>Start with a real problem and a clear user benefit.</span></div>
+          <div class="value"><div class="icon">⛨</div><strong>Security mindset</strong><span>Consider privacy, safety, and access boundaries from the start.</span></div>
+          <div class="value"><div class="icon">↗</div><strong>Continuous improvement</strong><span>Test, learn, refine, and document the work.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Products & projects</div><h2>Ideas we’re building around.</h2></div><p>A selection of product directions and engineering projects across commerce, mobile security, automation, AI, and enterprise workflows.</p></div>
+        <div class="projects">
+          <article class="project"><div class="project-top"><div class="project-icon">✦</div><span class="tag">Platform</span></div><h3>Innovate Hub</h3><p>A digital product platform concept focused on community, content, and connected experiences, supported by a modern application architecture.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Docker</span><span class="chip">Web</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">▦</div><span class="tag">Commerce</span></div><h3>Vysristore / Innovate Hub Commerce</h3><p>An e-commerce direction with product categories, admin-side catalog management, pricing and GST controls, and a database-backed storefront.</p><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Admin tools</span><span class="chip">E-commerce</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">⛨</div><span class="tag">Android security</span></div><h3>Handover Me</h3><p>A secure-lending dialer concept designed to limit access when lending a phone, with a restricted dial pad and safeguards against misuse of call-forwarding controls.</p><div class="chips"><span class="chip">Android</span><span class="chip">Kotlin</span><span class="chip">Kiosk mode</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">◉</div><span class="tag">Network security</span></div><h3>AdShield</h3><p>An Android VPN-based filtering project exploring network-level ad and unwanted-domain blocking, with emphasis on transparent behavior and platform limitations.</p><div class="chips"><span class="chip">Android</span><span class="chip">VPN / TUN</span><span class="chip">Networking</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">🌱</div><span class="tag concept">Automation concept</span></div><h3>Karshak — FFS Urea Agent</h3><p>A mobile-oriented workflow automation concept for navigating fertilizer-sale booking steps, helping reduce repetitive portal interactions for users.</p><div class="chips"><span class="chip">Android</span><span class="chip">WebView</span><span class="chip">Accessibility</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">✚</div><span class="tag concept">Digital health</span></div><h3>Healthcare & Diabetes Platform</h3><p>A healthcare web-project direction focused on presenting approachable health information and digital experiences for diabetes-related awareness and support.</p><div class="chips"><span class="chip">Web</span><span class="chip">Responsive UI</span><span class="chip">Health tech</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">⌖</div><span class="tag concept">Mobility</span></div><h3>Ride-Sharing Platform</h3><p>A mobility application concept exploring rider and driver flows, trip coordination, and the core experience of an on-demand transport service.</p><div class="chips"><span class="chip">Mobile / Web</span><span class="chip">Maps integration</span><span class="chip">Workflows</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">＋</div><span class="tag concept">Digital services</span></div><h3>Online Pharmacy</h3><p>A digital pharmacy concept exploring product discovery, catalog browsing, and an accessible ordering journey. Any real deployment would require applicable regulatory and pharmacy compliance.</p><div class="chips"><span class="chip">E-commerce</span><span class="chip">Catalog</span><span class="chip">UX</span></div></article>
+          <article class="project"><div class="project-top"><div class="project-icon">⌘</div><span class="tag">Enterprise expertise</span></div><h3>Enterprise Workflow Solutions</h3><p>Experience and technical work spanning SAP APO GATP operational support, availability checks, product allocation, CIF monitoring, reconciliation, and Ivalua-related sourcing workflows.</p><div class="chips"><span class="chip">SAP APO GATP</span><span class="chip">Ivalua</span><span class="chip">Operations</span></div></article>
+        </div>
+        <p class="project-note">Portfolio note: project labels describe each project’s direction, scope, or area of work—not a claim that every listed product is publicly launched or production-ready. Add live demos and repository links when available.</p>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">What we focus on</div><h2>Capabilities across the stack.</h2></div><p>From interface design to backend systems and deployment, we approach each solution with maintainability and real-world constraints in mind.</p></div>
+        <div class="cap-grid">
+          <div class="cap"><div class="icon">▤</div><h3>Web applications</h3><p>Responsive interfaces, product experiences, admin dashboards, and full-stack application foundations.</p></div>
+          <div class="cap"><div class="icon">▣</div><h3>Android experiences</h3><p>Mobile-first workflows, Kotlin-based apps, accessibility-aware interactions, and device-level constraints.</p></div>
+          <div class="cap"><div class="icon">⌘</div><h3>Workflow automation</h3><p>Reduce repetitive steps through structured workflows, integrations, and task-focused tooling.</p></div>
+          <div class="cap"><div class="icon">✧</div><h3>AI & intelligent systems</h3><p>Exploring AI-assisted features, retrieval-based systems, and verification-oriented outputs.</p></div>
+          <div class="cap"><div class="icon">⛨</div><h3>Security-minded design</h3><p>Access restrictions, safer user flows, privacy awareness, and clear boundaries around platform capabilities.</p></div>
+          <div class="cap"><div class="icon">▧</div><h3>Cloud & DevOps</h3><p>Containerized services, CI/CD workflows, infrastructure automation, and monitoring foundations.</p></div>
+          <div class="cap"><div class="icon">◫</div><h3>Data & backend systems</h3><p>API design, relational and document databases, service architecture, and data-driven features.</p></div>
+          <div class="cap"><div class="icon">◎</div><h3>Enterprise operations</h3><p>Operational support, issue analysis, monitoring, reconciliation, reporting, and process documentation.</p></div>
+        </div>
+        <div class="stack" aria-label="Technology areas"><span>Java</span><span>Python</span><span>JavaScript</span><span>Kotlin</span><span>Node.js</span><span>Spring Boot</span><span>HTML & CSS</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>Jenkins</span><span>Terraform</span><span>Ansible</span><span>Azure</span><span>AWS</span><span>Prometheus</span><span>Grafana</span><span>SAP APO GATP</span><span>Ivalua</span></div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">How we work</div><h2>From problem to product.</h2></div><p>A practical delivery mindset helps keep the goal clear, the implementation testable, and the next step visible.</p></div>
+        <div class="process-grid">
+          <div class="step"><b>01 / DISCOVER</b><h3>Understand the problem</h3><p>Clarify users, constraints, requirements, and what success should mean.</p></div>
+          <div class="step"><b>02 / DESIGN</b><h3>Shape the experience</h3><p>Map user journeys, define the scope, and build a usable interface.</p></div>
+          <div class="step"><b>03 / BUILD</b><h3>Engineer the solution</h3><p>Develop in focused steps, keep components maintainable, and test key behavior.</p></div>
+          <div class="step"><b>04 / IMPROVE</b><h3>Validate and refine</h3><p>Use feedback and evidence to fix issues and prioritize the next iteration.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <div><div class="kicker">Contact us</div><h2>Have a problem worth solving?</h2><p>For product enquiries, collaboration, project discussions, or technology conversations, get in touch with Innovate Hub.</p><p><strong>Email</strong><br><a class="text-link" href="mailto:sushanth.chithaluri@innovatehub.app">sushanth.chithaluri@innovatehub.app</a></p></div>
+          <div class="contact-actions"><a class="btn btn-primary" href="mailto:sushanth.chithaluri@innovatehub.app?subject=Innovate%20Hub%20Enquiry&body=Hello%20Innovate%20Hub%2C%0A%0AI%27d%20like%20to%20discuss%3A%0A">Send an email <span aria-hidden="true">↗</span></a><button class="btn btn-ghost" id="copyEmail" type="button">Copy email</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div>© <span id="year"></span> Innovate Hub. Built with purpose.</div><div class="footer-links"><a href="#about">About</a><a href="#products">Projects</a><a href="#contact">Contact</a><a href="mailto:sushanth.chithaluri@innovatehub.app">Email</a></div><div>Ideas into impact.</div></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('copyEmail').addEventListener('click', async () => {
+      const email = 'sushanth.chithaluri@innovatehub.app';
+      const button = document.getElementById('copyEmail');
+      try {
+        await navigator.clipboard.writeText(email);
+        button.textContent = 'Email copied ✓';
+      } catch {
+        window.location.href = 'mailto:' + email;
+        button.textContent = 'Open email app ↗';
+      }
+      window.setTimeout(() => button.textContent = 'Copy email', 2200);
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.section-head, .panel, .value, .project, .cap, .step, .contact').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
